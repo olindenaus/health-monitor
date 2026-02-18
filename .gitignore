@@ -13,6 +13,7 @@ data/*.sqlite
 
 # Garmin credentials and downloaded data
 ~/.GarminDb/
+garmindb.log
 *.fit
 *.json
 
