@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "health-monitor"
+version = "0.1.0"
+description = "Personal health event tracker with Garmin integration"
+requires-python = ">=3.9"
+dependencies = [
+    "click>=8.1",
+    "rich>=13.0",
+]
+
+[project.optional-dependencies]
+garmin = [
+    "garmindb>=1.0",
+]
+voice = [
+    "openai-whisper",
+    "anthropic>=0.40",
+    "sounddevice",
+    "scipy",
+]
+
+[project.scripts]
+hm = "health_monitor.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["health_monitor"]

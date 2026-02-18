@@ -1,0 +1,23 @@
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+*.egg-info/
+dist/
+build/
+.DS_Store
+
+# Database files (keep schema, not personal data)
+data/*.db
+data/*.sqlite
+
+# Garmin credentials and downloaded data
+~/.GarminDb/
+*.fit
+*.json
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Environment
+.env
