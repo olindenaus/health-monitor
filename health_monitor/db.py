@@ -28,6 +28,18 @@ def init_db() -> None:
 
             CREATE INDEX IF NOT EXISTS idx_events_timestamp ON events(timestamp);
             CREATE INDEX IF NOT EXISTS idx_events_tag       ON events(tag);
+
+            CREATE TABLE IF NOT EXISTS garmin_daily (
+                day             TEXT PRIMARY KEY,
+                steps           INTEGER,
+                rhr_avg         REAL,
+                hr_avg          REAL,
+                stress_avg      INTEGER,
+                sleep_total_sec INTEGER,
+                sleep_rem_sec   INTEGER,
+                calories_active INTEGER,
+                synced_at       TEXT NOT NULL
+            );
         """)
 
 
