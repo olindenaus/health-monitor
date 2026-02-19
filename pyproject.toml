@@ -17,10 +17,10 @@ garmin = [
     "garmindb>=1.0",
 ]
 voice = [
-    "openai-whisper",
+    "faster-whisper",
     "anthropic>=0.40",
     "sounddevice",
-    "scipy",
+    "soundfile",
 ]
 
 [project.scripts]

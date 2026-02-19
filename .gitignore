@@ -17,6 +17,9 @@ garmindb.log
 *.fit
 *.json
 
+# Whisper model cache
+.whisper_cache/
+
 # Jupyter checkpoints
 .ipynb_checkpoints/
 
